@@ -3,6 +3,7 @@ import Navbar from "./shared/navbars/Navbar";
 import Footer from "./shared/footers/Footer";
 
 const MainLayout = () => {
+ 
   return (
     <div className="font-poppins">
       <ScrollRestoration />
