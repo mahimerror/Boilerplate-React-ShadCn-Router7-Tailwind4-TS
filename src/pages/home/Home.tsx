@@ -1,4 +1,4 @@
-import { UserIcon1 } from "@/assets/icons";
+import { UserIcon1 } from "@/assets/icons/icons";
 
 function Home() {
   return (
