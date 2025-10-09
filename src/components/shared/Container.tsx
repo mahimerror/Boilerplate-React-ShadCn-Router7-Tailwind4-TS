@@ -24,7 +24,7 @@ const Container: React.FC<ContainerProps> = ({
       className={cn(
         fluid
           ? "w-full px-4"
-          : "max-w-[1460px] mx-auto px-4 sm:px-6 lg:px-8 w-full",
+          : "max-w-[calc(1420px+64px)] mx-auto px-4 sm:px-6 lg:px-8 w-full", // 1420px + 64px = 1484px (1420px container + 32px padding on each side *2)
         center && "flex justify-center",
         className
       )}
