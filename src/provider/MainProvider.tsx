@@ -1,17 +1,20 @@
 import { StateContextProvider } from "@/context/StateContext";
-import useSyncLocalProject from "@/hooks/useSyncLocalProject";
+import { AuthContextProvider } from "@/context/AuthContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
 
 const MainProvider = ({ children }: { children: ReactNode }) => {
-  useSyncLocalProject("demo-project-name"); // Please replace with your actual project name
   const queryClient = new QueryClient();
 
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <StateContextProvider>{children}</StateContextProvider>
+        <AuthContextProvider>
+          <StateContextProvider>{children}</StateContextProvider>
+        </AuthContextProvider>
       </QueryClientProvider>
+      <Toaster position="top-right" reverseOrder={false} />
     </>
 
     // <Provider store={store}> // Redux store provider

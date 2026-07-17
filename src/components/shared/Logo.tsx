@@ -1,6 +1,11 @@
+import { cn } from "@/lib/utils";
 
-const Logo = () => {
-  return <div>Logo</div>;
+type LogoProps = {
+  className?: string;
+};
+
+const Logo = ({ className }: LogoProps) => {
+  return <div className={cn("font-semibold", className)}>Logo</div>;
 };
 
 export default Logo;

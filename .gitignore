@@ -13,6 +13,8 @@ dist
 dist.zip
 dist-ssr
 *.local
+pnpm-lock.yaml
+pnpm-workspace.yaml
 
 # Editor directories and files
 .vscode/*

@@ -4,7 +4,7 @@ import Footer from "./shared/footers/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="font-poppins">
+    <div className="">
       <ScrollRestoration />
       <Navbar />
       <main>

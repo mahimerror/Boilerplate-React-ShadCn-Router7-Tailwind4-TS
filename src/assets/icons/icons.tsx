@@ -1,6 +1,11 @@
+import { ArrowLeft, ArrowRight, LoaderCircle } from "lucide-react";
+import type { ComponentPropsWithoutRef } from "react";
+
 import { cn } from "@/lib/utils";
 
-export const UserIcon1 = ({ className = "", ...props }) => (
+type IconProps = ComponentPropsWithoutRef<"svg">;
+
+export const UserIcon1 = ({ className = "", ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -16,3 +21,9 @@ export const UserIcon1 = ({ className = "", ...props }) => (
     />
   </svg>
 );
+
+export const BackIcon2 = (props: IconProps) => <ArrowLeft {...props} />;
+
+export const ForwardIcon2 = (props: IconProps) => <ArrowRight {...props} />;
+
+export const LoaderIcon2 = (props: IconProps) => <LoaderCircle {...props} />;
